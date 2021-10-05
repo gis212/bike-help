@@ -5,13 +5,16 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "grunt pug"
+    "build": "grunt",
+    "serve": "npm run build && http-server public"
   },
   "author": "",
   "private": true,
   "devDependencies": {
     "coffeescript": "^2.5.1",
     "grunt": "^1.4.1",
-    "grunt-pug-i18n": "^1.0.1"
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-pug-i18n": "^1.0.1",
+    "http-server": "^13.0.2"
   }
 }

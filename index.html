@@ -1,0 +1,13 @@
+<html>
+<head>
+  <script>
+    let availableLanguages = ['en-US', 'he', 'ru-RU'],
+      lang = availableLanguages.includes(navigator.language)
+        ? navigator.language
+        : 'en-US'
+        // ternary operation
+    window.location.pathname = `/${lang}`
+  </script>
+</head>
+
+</html>

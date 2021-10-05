@@ -6,7 +6,7 @@ module.exports = function(grunt) {
         options: {
           i18n: {
             locales: 'locales/*.yaml',
-            namespace: '$i18n'
+            namespace: '$i18n',
           },
         },
         files: {
@@ -14,6 +14,18 @@ module.exports = function(grunt) {
         },
       },
     },
+    copy: {
+      main: {
+        files: [
+          ...['css', 'img'].map(dir => ({
+            expand: true, src:[`${dir}/**`], dest: 'public/',
+          })),
+          {expand: true, src:['index.html'], dest: 'public/'},
+        ]
+      },
+    },
   })
   grunt.loadNpmTasks('grunt-pug-i18n')
+  grunt.loadNpmTasks('grunt-contrib-copy')
+  grunt.registerTask('default', ['pug', 'copy'])
 }
