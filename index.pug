@@ -1,2 +1,42 @@
-body 
-  h1 #{$i18n.hello}
+doctype html
+head
+  title Bike-Help
+  style @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap')
+  link(rel='stylesheet' type='text/css' href='../css/style.css')
+nav.zone.blue.sticky
+  ul.main-nav
+    li
+      a(href='') About 
+    li
+      a(href='') Our Service
+    li
+      a(href='') Our Work
+    li.push
+      a(href='') Contact
+.container
+  .cover
+  .coverText
+    h1 Bike - Help 
+    h2 Mobile Bicycle Repair Shop 
+    h2 Haifa and north of Israel
+.zone.blue.cards-wrapper
+  .card.zone
+    img(src='../img/startup1.jpg')
+    .text
+      h1 Fix Your Bike
+      p At your home\work at your time
+      button Learn more
+  .card.zone
+    img(src='../img/startup2.jpg')
+    .text
+      h1 Professional Bike Mechanic
+      p 10 years of Bike repair experince
+      button Learn more
+  .card.zone
+    img(src='../img/startup3.jpg')
+    .text
+      h1 Fix Any Type Of Essues
+      p With our expreince, we can fix every 
+      button Learn more
+footer.zone
+  p 2021 Maxit
