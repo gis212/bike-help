@@ -2,41 +2,54 @@ doctype html
 head
   title Bike-Help
   style @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap')
+  link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
   link(rel='stylesheet' type='text/css' href='../css/style.css')
-nav.zone.blue.sticky
-  ul.main-nav
+header 
+  h2 
+  a Bike-Help 
+  nav
     li
-      a(href='') About 
+      a(href='#about') About 
     li
-      a(href='') Our Service
+      a(href='#services') Our Services
     li
-      a(href='') Our Work
-    li.push
-      a(href='') Contact
-.container
-  .cover
-  .coverText
-    h1 Bike - Help 
-    h2 Mobile Bicycle Repair Shop 
-    h2 Haifa and north of Israel
-.zone.blue.cards-wrapper
-  .card.zone
-    img(src='../img/startup1.jpg')
-    .text
-      h1 Fix Your Bike
-      p At your home\work at your time
-      button Learn more
-  .card.zone
-    img(src='../img/startup2.jpg')
-    .text
-      h1 Professional Bike Mechanic
-      p 10 years of Bike repair experince
-      button Learn more
-  .card.zone
-    img(src='../img/startup3.jpg')
-    .text
-      h1 Fix Any Type Of Essues
-      p With our expreince, we can fix every 
-      button Learn more
-footer.zone
-  p 2021 Maxit
+      a(href='#contact') Contact
+section.banner-area
+  .banner-img
+  h1 Bike - Help 
+  h2 Mobile Bicycle Repair Shop 
+  h2 Haifa and north of Israel
+  a.banner-btn(href='#') Contact Us
+section#about.about-area
+  h3.section-title About us
+  ul.about-content 
+    li.about-left 
+    li.about-right 
+      h3 About our company
+      p Lorem ipsum dolor sit amet,
+      a.about-btn Learn More
+section#services.services-area  
+  h3.section-title Services
+  ul.services-content
+    li
+      i.fa.fa-bicycle
+      h4 bikerepair
+      p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem molestiae libero obcaecati veritatis quo ad dolore consequatur corrupti, illum, nesciunt aut eaque quam fuga praesentium id, pariatur dicta aperiam doloribus?
+    li
+      i.fa.fa-wrench
+      h4 wheelrepair
+      p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem molestiae libero obcaecati veritatis quo ad dolore consequatur corrupti, illum, nesciunt aut eaque quam fuga praesentium id, pariatur dicta aperiam doloribus?
+section#services.contact-area  
+  h3.section-title Contact
+  ul.contact-content
+    li
+      i.fa.fa-map-marker
+      p Kineret 3 </br> Haifa City, Israel
+    li
+      i.fa.fa-phone
+      p +972504774448
+    li
+      i.fa.fa-envelope
+      p info@bike-help.com
+footer
+  h4 All Rights Reserved - maxit
