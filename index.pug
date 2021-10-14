@@ -9,42 +9,46 @@ header
   a Bike-Help 
   nav
     li
-      a(href='#about') About 
+      a(href='#about') #{$i18n.aboutus}
     li
-      a(href='#services') Our Services
+      a(href='#services') #{$i18n.servicesh}
     li
-      a(href='#contact') Contact
+      a(href='#contact') #{$i18n.contacth}
 section.banner-area
   .banner-img
   h1 Bike - Help 
-  h2 Mobile Bicycle Repair Shop 
-  h2 Haifa and north of Israel
-  a.banner-btn(href='#') Contact Us
+  h2 #{$i18n.header}
+  h2 #{$i18n.title}
+  a.banner-btn(href='#contact') #{$i18n.contacth}
 section#about.about-area
-  h3.section-title About us
   ul.about-content 
     li.about-left 
     li.about-right 
-      h3 About our company
-      p Lorem ipsum dolor sit amet,
+      h3 #{$i18n.aboutus}
+      p #{$i18n.aboutp}
       a.about-btn Learn More
+  iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13414.743162210547!2d34.99756899876275!3d32.8005896639692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151dbba23a814ecb%3A0xd5bf43125db78464!2z16rXmden15XXnyDXkNeV16TXoNeZ15nXnSDXoNeZ15nXkyDXkdeX15nXpNeU!5e0!3m2!1sen!2sil!4v1634244271950!5m2!1sen!2sil", width="1078" height="290" style="border:0;" allowfullscreen="" loading="lazy")
 section#services.services-area  
-  h3.section-title Services
+  h3.section-title #{$i18n.servicesh}
   ul.services-content
     li
       i.fa.fa-bicycle
-      h4 bikerepair
-      p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem molestiae libero obcaecati veritatis quo ad dolore consequatur corrupti, illum, nesciunt aut eaque quam fuga praesentium id, pariatur dicta aperiam doloribus?
+      h4 #{$i18n.scontenth1}
+      p #{$i18n.scontentp1}
+    li
+      i.fa.fa-car
+      h4 #{$i18n.scontenth2}
+      p #{$i18n.scontentp2}
     li
       i.fa.fa-wrench
-      h4 wheelrepair
-      p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem molestiae libero obcaecati veritatis quo ad dolore consequatur corrupti, illum, nesciunt aut eaque quam fuga praesentium id, pariatur dicta aperiam doloribus?
+      h4 #{$i18n.scontenth3}
+      p #{$i18n.scontentp3}
 section#services.contact-area  
-  h3.section-title Contact
+  h3.section-title #{$i18n.contacth}
   ul.contact-content
     li
       i.fa.fa-map-marker
-      p Kineret 3 </br> Haifa City, Israel
+      p #{$i18n.address}
     li
       i.fa.fa-phone
       p +972504774448
