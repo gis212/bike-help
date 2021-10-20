@@ -28,12 +28,6 @@ header{
   display: -ms-flexbox;
   display: -webkit- flex;
   display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -130,7 +124,6 @@ section p {
 .banner-area .banner-img::after{
   content: '';
   position: absolute;
-  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
