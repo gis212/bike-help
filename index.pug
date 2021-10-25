@@ -1,12 +1,14 @@
 doctype html
+-
+  let merge = require('deepmerge')
+  $i18n = merge($default_i18n, $i18n)
 head
-  title Bike-Help
-  style @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap')
+  title #{$i18n.title}
   link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
-  link(rel='stylesheet' type='text/css' href='../css/style.css')
+  link(rel='stylesheet' type='text/css' href='../style.css')
 header 
   h2 
-  a Bike-Help 
+  a #{$i18n.title}
   nav
     li
       a(href='#about') #{$i18n.aboutus}
@@ -16,14 +18,14 @@ header
       a(href='#contact') #{$i18n.contacth}
 section.banner-area
   .banner-img
-  h1 Bike - Help 
+  h1 #{$i18n.title}
   h2 #{$i18n.header}
-  h2 #{$i18n.title}
+  h2 #{$i18n.subtitle}
   a.banner-btn(href='#contact') #{$i18n.contacth}
-section#about.about-area
-  ul.about-content 
-    li.about-left 
-    li.about-right 
+section#about
+  ul#about-content 
+    li#about-left 
+    li#about-right 
       h3 #{$i18n.aboutus}
       p #{$i18n.aboutp}
       a.about-btn Learn More
@@ -31,18 +33,12 @@ section#about.about-area
 section#services.services-area  
   h3.section-title #{$i18n.servicesh}
   ul.services-content
-    li
-      i.fa.fa-bicycle
-      h4 #{$i18n.scontenth1}
-      p #{$i18n.scontentp1}
-    li
-      i.fa.fa-car
-      h4 #{$i18n.scontenth2}
-      p #{$i18n.scontentp2}
-    li
-      i.fa.fa-wrench
-      h4 #{$i18n.scontenth3}
-      p #{$i18n.scontentp3}
+    each cardData, i in $i18n.services
+      - let {symbol, title, content} = cardData
+      li
+        i(class=`fa fa-${symbol}`)
+        h4 #{title}
+        p #{content}
 section#services.contact-area  
   h3.section-title #{$i18n.contacth}
   ul.contact-content
