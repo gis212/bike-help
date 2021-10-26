@@ -2,7 +2,7 @@ let { readFileSync } = require('fs')
 let { load } = require("js-yaml")
 let poststylus = () =>
   require('poststylus')(['autoprefixer', 'postcss-font-magician', 'cssnano'])
-module.exports = function(grunt) { 
+module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     pug: {

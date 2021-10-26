@@ -4,3 +4,9 @@ services:
   - symbol: bicycle
   - symbol: car
   - symbol: wrench
+contact:
+  - symbol: marker
+  - symbol: phone
+  - content: +972504774448
+  - symbol: envelope
+  - content:  info@bike-help.com
