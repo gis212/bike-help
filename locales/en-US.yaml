@@ -1,17 +1,14 @@
 services:
-  - symbol: bicycle
-    title: Speed
+  - title: Speed
     content: Our masters will come to you as quickly as possible and carry out repairs as soon as possible.
-  - symbol: car
-    title: Mobillity
+  - title: Mobillity
     content: You can order a visit of a specialist to your home or any other place. Departure of the master to the place of breakdown.
-  - symbol: wrench
-    title: Quality
+  - title: Quality
     content: The opinion of each client is important to us, therefore we pay special attention to the quality of the work performed.
-contacth: Contact Us
+contact_title: Contact Us
 title: Bike - Help
 subtitle: Haifa and north of Israel
 header: Mobile Bicycle Repair Shop
 address: Kineret 3, Haifa City, Israel
-aboutus: About us
+about_title: About us
 aboutp: Each of you who have already appreciated the advantage of a bicycle in our city over a car, as well as everyone who is simply interested in this invention of mankind knows firsthand that no matter how good and high-quality it is, it still sometimes requires repair. Not every cyclist can say with confidence that he will be able to cope with any breakdown. There are times when a specialist cannot do without a show, and you can only bring a two-wheeled friend to a service with bans on public transport on foot or by car. It is for such cases that our mobile workshop Bike - Help! Was created. With us you can order a specialist visit to your home or any other place who will diagnose and repair your bike at the prices of stationary workshops.

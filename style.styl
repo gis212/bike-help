@@ -6,13 +6,9 @@
 html
   scroll-behavior: smooth
 
-body 
+body
   margin: 0 auto
   font-family: 'Poppins', sans-serif
-
-li, nav
-  list-style: none
-  padding: 35px
 
 a
   text-decoration: none
@@ -32,15 +28,16 @@ header
   color: #fff
   padding: 35px 100px 0
 
-  h2 
-    text-transform: uppercase
-
-  nav 
+  nav
+    width: 100%
     display: flex
     padding: 35px 100px 0
 
-    li
-      margin: 0, 15px
+    a
+      display: block
+      margin: 15px
+      &#title
+        flex-grow: 1
       :first-child
         margin-left: 0
 
@@ -52,9 +49,7 @@ header
 
   @media(max-width: 700px)
     flex-direction: column
-    h2
-      margin-bottom: 15px
-    nav li
+    nav a
       margin: 0 7px
 
 section
@@ -69,14 +64,42 @@ section
   @media(max-width: 600px)
     padding: 125px 30px
 
-  p 
+  p
     max-width: 800px
     text-align: center
     margin-bottom: 35px
     padding: 0 20px
     line-height: 2
 
-.banner-area
+  .section-title
+    text-transform: uppercase
+    font-size: 50px
+    margin-bottom: 5%
+
+  .card-list
+    width: 100%
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+
+    li
+      padding: 0 30px
+      flex-basis: 33%
+      text-align: center
+
+      i
+        font-size: 50px
+        color: crimson
+        margin-bottom: 25px
+
+      h4
+        font-size: 20px
+        margin-bottom: 25px
+
+      p
+        margin: 0
+
+#banner
   position: relative
   justify-content: center
   min-height: 100vh
@@ -93,7 +116,7 @@ section
     background-size: cover
     z-index: -1
 
-    ::after
+    &::after
       content: ''
       position: absolute
       left: 0
@@ -118,12 +141,6 @@ section
 
   @media(max-width:800px)
     min-height: 600px
-    h1
-      font-size: 32px
-    h2
-      font-size: 20px
-    a.banner-btn
-      padding: 15px 40px
 
 /*about*/
 #about-content
@@ -137,77 +154,37 @@ section
   background-size: cover
   background-position: center
 
-#about-left
-  flex-basis: 40%
-  background-image: url(/img/startup1.jpg)
+  #about-left
+    flex-grow: 2
+    background-image: url(/img/startup1.jpg)
 
-#about-right
-  flex-basis: 60%
-  h2
-    margin-bottom: 3%
-  p
-    max-width: 800px
-    margin-bottom: 35px
-    line-height: 1.5
-    text-align: left
-    padding-left: 0
-  .about-btn
-    padding: 15px 35px
-    background: crimson
-    border-radius: 50px
-    text-transform: uppercase
-    color: #fff
-
-.section-title
-  text-transform: uppercase
-  font-size: 50px
-  margin-bottom: 5%
-
-@media(max-width: 1000px)
-  .about-left,
-  .about-right
-    flex-basis: 100%
-  
-  #about-content li
-    padding: 8px
+  #about-right
+    flex-grow: 3
+    h2
+      margin-bottom: 3%
+    p
+      max-width: 800px
+      margin-bottom: 35px
+      line-height: 1.5
+      text-align: left
+      padding-left: 0
+    .about-btn
+      padding: 15px 35px
+      background: crimson
+      border-radius: 50px
+      text-transform: uppercase
+      color: #fff
 
 /*services*/
 #services
   background: #ddd
-
-ul.services-content
   width: 100%
   display: flex
   flex-wrap: wrap
   justify-content: center
-
-.services-content li
   padding: 0 30px
   flex-basis: 33%
   text-align: center
-
-.services-content i
-  font-size: 50px
-  color: crimson
-  margin-bottom: 25px
-
-.services-content h4
-  font-size: 20px
-  margin-bottom: 25px
-
-.services-content li p
-  margin: 0
-
-@media(max-width:1000px)
-  .services-content li
-    flex-basis: 100%
-    margin-bottom: 65px
-  
-  .services-content li:last-child
-    margin-bottom: 0
-  
-  .services-content li p
-    padding: 0
 
 /* contact*/
 #contact
@@ -236,19 +213,9 @@ ul.contact-content
   .contact-content li
     flex-basis: 100%
     margin-bottom: 65px
-  
+
   .contact-content li:last-child
     margin-bottom: 0
-  
+
   .contact-content li p
     padding: 0
-
-/*footer*/
-#footer
-  display: flex
-  flex-direction: column
-  align-items: center
-  text-align: center
-  color: #fff
-  background-color: #000
-  padding: 60px 0
