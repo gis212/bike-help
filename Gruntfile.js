@@ -2,6 +2,8 @@ let { readFileSync } = require('fs')
 let { load } = require("js-yaml")
 let poststylus = () =>
   require('poststylus')(['autoprefixer', 'postcss-font-magician', 'cssnano'])
+let webpackConfig = require('./webpack.config')
+
 module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -28,6 +30,9 @@ module.exports = function(grunt) {
         files: { 'public/style.css': 'style.styl' },
       },
     },
+    webpack: {
+      dev: webpackConfig,
+    },
     copy: {
       main: {
         files: [
@@ -40,5 +45,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-pug-i18n')
   grunt.loadNpmTasks('grunt-contrib-stylus')
   grunt.loadNpmTasks('grunt-contrib-copy')
-  grunt.registerTask('default', ['pug', 'stylus', 'copy'])
+  grunt.loadNpmTasks('grunt-webpack')
+  grunt.registerTask('default', ['pug', 'stylus', 'webpack', 'copy'])
 }
