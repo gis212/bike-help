@@ -26,22 +26,4 @@ section#about
     a.about-btn Learn More
   iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13414.743162210547!2d34.99756899876275!3d32.8005896639692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151dbba23a814ecb%3A0xd5bf43125db78464!2z16rXmden15XXnyDXkNeV16TXoNeZ15nXnSDXoNeZ15nXkyDXkdeX15nXpNeU!5e0!3m2!1sen!2sil!4v1634244271950!5m2!1sen!2sil", width="1078" height="290" style="border:0;" allowfullscreen="" loading="lazy")
 card-list#services(cards=$i18n.services, title=$i18n.services_title)
-  //- h3.section-title #{}
-  //- each cardData, i in $i18n.services
-  //-   - let {symbol, title, content} = cardData
-  //-   .card
-  //-     i(class=`fa fa-${symbol}`)
-  //-     h4 #{title}
-  //-     p #{content}
-section#contact
-  h3.section-title #{$i18n.contact_title}
-  ul.card-list
-    li
-      i.fa.fa-map-marker
-      p #{$i18n.address}
-    li
-      i.fa.fa-phone
-      p +972504774448
-    li
-      i.fa.fa-envelope
-      p info@bike-help.com
+card-list#contact(cards=i18n.about, title=$i18n.contact_title)
