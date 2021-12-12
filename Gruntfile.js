@@ -46,5 +46,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-stylus')
   grunt.loadNpmTasks('grunt-contrib-copy')
   grunt.loadNpmTasks('grunt-webpack')
-  grunt.registerTask('default', ['pug', 'stylus', 'webpack', 'copy'])
+  grunt.registerTask('default', ['webpack', 'stylus',  'pug', 'copy'])
 }
