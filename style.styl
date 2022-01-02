@@ -3,12 +3,19 @@
   padding: auto
   box-sizing: border-box
 
+.smooth
+  transition: transform calc(var(--f, 1)*.5s) ease-out;
+
+  :global(ul)
+    list-style-type: none
+
 html
   scroll-behavior: smooth
 
 body
   margin: 0 auto
   font-family: 'Poppins', sans-serif
+  overflow-x: hidden
 
 a
   text-decoration: none
@@ -76,45 +83,51 @@ section
     font-size: 50px
     margin-bottom: 5%
 
-  .card-list
-    width: 100%
-    display: flex
-    flex-wrap: wrap
-    justify-content: center
-
-    li
-      padding: 0 30px
-      flex-basis: 33%
-      text-align: center
-
-      i
-        font-size: 50px
-        color: crimson
-        margin-bottom: 25px
-
-      h4
-        font-size: 20px
-        margin-bottom: 25px
-
-      p
-        margin: 0
-
-#banner
-  position: relative
+.card-list
+  width: 100%
+  display: flex
+  flex-wrap: wrap
   justify-content: center
-  min-height: 100vh
-  color: #fff
-  text-align: center
+  list-style-type: none
 
-  .banner-img
-    background-image: url(/img/BGs.jpg)
-    position: absolute
-    top: 0
-    left: 0
-    width: 100%
+  li
+    padding: 0 30px
+    flex-basis: 33%
+    text-align: center
+
+    i
+      font-size: 50px
+      color: crimson
+      margin-bottom: 25px
+
+    h4
+      font-size: 20px
+      margin-bottom: 25px
+
+    p
+      margin: 0
+.swiper
+  display: flex
+  width: 100%
+  align-items: center
+  text-align: center
+  overflow-y: hidden
+  height: 50vw
+  max-height: 100vh
+  --n: 1
+  width: 100%
+  width: calc(var(--n)*100%)
+  transform: translate(calc(var(--i, 0)/var(--n)*-100%))
+  transition: transform .5s ease-out
+
+  :global(img)
+    // background-image: url(/img/BGs.jpg)
     height: 100%
-    background-size: cover
+    width: inherit
     z-index: -1
+    min-width: 100%
+    width: calc(100%/var(--n))
+    pointer-events: none
 
     &::after
       content: ''
@@ -125,22 +138,23 @@ section
       background-color: #000
       opacity: 0.8
 
-  h1
-    margin-bottom: 15px
-    font-size: 65px
 
-  h2
-    margin-bottom: 40px
-    font-size: 25px
+h1
+  margin-bottom: 15px
+  font-size: 65px
 
-  a.banner-btn
-    padding: 15px 35px
-    background: crimson
-    border-radius: 50px
-    text-transform: uppercase
+h2
+  margin-bottom: 40px
+  font-size: 25px
 
-  @media(max-width:800px)
-    min-height: 600px
+a.banner-btn
+  padding: 15px 35px
+  background: crimson
+  border-radius: 50px
+  text-transform: uppercase
+
+@media(max-width:800px)
+  min-height: 600px
 
 /*about*/
 #about-content
@@ -185,6 +199,7 @@ section
   padding: 0 30px
   flex-basis: 33%
   text-align: center
+  list-style: none
 
 /* contact*/
 #contact

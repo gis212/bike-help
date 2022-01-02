@@ -38,6 +38,7 @@ module.exports = function(grunt) {
         files: [
           { expand: true, src: ['img/**'], dest: 'public/' },
           { expand: true, src: ['index.html'], dest: 'public/' },
+          { expand: true, src: ['swiper.js'], dest: 'public/' },
         ],
       },
     },

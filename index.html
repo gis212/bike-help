@@ -7,6 +7,9 @@
         : 'en-US'
         // ternary operation
     window.location.pathname = `/${lang}`
+    let _C = document.querySelector('.swiper'),
+    N = _C.children.length;
+    _C.style.setProperty('--n', N)
   </script>
 </head>
 

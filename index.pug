@@ -6,7 +6,9 @@ head
   title #{$i18n.title}
   link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
   link(rel='stylesheet' type='text/css' href='../style.css')
+  link(rel='icon' type='icon' href='./img/favicon.ico')
   script(src="../main.js")
+  script(src='../swiper.js')
 header
   nav
     a#title(href='#banner') #{$i18n.title}
@@ -14,7 +16,11 @@ header
     a(href='#services') #{$i18n.services_title}
     a(href='#contact') #{$i18n.contact_title}
 section#banner
-  .banner-img
+  .swiper
+    img(src='/img/BGs.jpg')
+    //- img(src='/img/slide2.jpg')
+    //- img(src='/img/slide3.jpg')
+    //- img(src='/img/slide4.jpg')
   h1 #{$i18n.title}
   h2 #{$i18n.header}
   h2 #{$i18n.subtitle}
